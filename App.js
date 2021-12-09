@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Counter from './Counter.js';
 import SettingsScreen from './SettingsScreen.js';
 import Home from './Home.js';
+
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
@@ -30,6 +31,18 @@ export default function App() {
             ),
           }}
         />
+        <Tab.Screen
+          name='login'
+          component={login}
+          options={{
+            tabBarLabel: 'login',
+            tabBarIcon: ({ color }) => (
+              <MaterialCommunityIcons name='login' color={color} size={26} />
+            ),
+          }}
+        />
+
+
         <Tab.Screen
           name='Step Counter'
           component={Counter}
